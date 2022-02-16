@@ -6,7 +6,7 @@ terraform {
     key                  = "tfstatedevops.tfstate"
   }
 }
- 
+
 provider "azurerm" {
   # The "feature" block is required for AzureRM provider 2.x.
   # If you're using version 1.x, the "features" block is not allowed.
@@ -15,7 +15,7 @@ provider "azurerm" {
 }
  
 data "azurerm_client_config" "current" {}
- 
+
 #Create Resource Group
 resource "azurerm_resource_group" "tamops" {
   name     = "tamops"
