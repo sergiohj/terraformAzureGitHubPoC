@@ -34,3 +34,10 @@ resource "azurerm_sql_database" "example" {
     environment = "production"
   }
 }
+resource "azurerm_sql_firewall_rule" "fw_connections_todb" {
+  name                = "allow-azure-services"
+  resource_group_name = "tamops"
+  server_name         = "mssqlservershj"
+  start_ip_address    = "0.0.0.0"
+  end_ip_address      = "0.0.0.0"
+}
