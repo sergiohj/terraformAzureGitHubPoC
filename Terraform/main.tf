@@ -20,7 +20,6 @@ resource "azurerm_resource_group" "tamops" {
   name     = "tamops"
   location = "West Europe"
 }
-
 resource "azurerm_sql_server" "sqlserver" {
   name                              = "terraformtestshj"
   resource_group_name               = "tamops"
