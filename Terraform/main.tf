@@ -5,6 +5,12 @@ terraform {
     container_name       = "tfstatedevops"
     key                  = "tfstatedevops.tfstate"
   }
+  required_providers {
+    azurerm = {
+      source = "hashicorp/azurerm"
+      version = "~>2.0"
+    }
+  }
 }
 provider "azurerm" {
   features {}
@@ -14,6 +20,7 @@ resource "azurerm_resource_group" "tamops" {
   name     = "tamops"
   location = "West Europe"
 }
+
 resource "azurerm_sql_server" "sqlserver" {
   name                              = "terraformtestshj"
   resource_group_name               = "tamops"
