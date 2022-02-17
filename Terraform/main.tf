@@ -15,7 +15,7 @@ resource "azurerm_resource_group" "tamops" {
   location = "West Europe"
 }
 resource "azurerm_sql_server" "example" {
-  name                         = "mssqlserver"
+  name                         = "mssqlservershj"
   resource_group_name          = "tamops"
   location                     = "West Europe"
   version                      = "12.0"
@@ -26,10 +26,10 @@ resource "azurerm_sql_server" "example" {
   }
 }
 resource "azurerm_sql_database" "example" {
-  name                = "myexamplesqldatabase"
+  name                = "myexamplesqldatabaseshj"
   resource_group_name = "tamops"
   location            = "West US"
-  server_name         = "mssqlserver"
+  server_name         = "mssqlservershj"
   tags = {
     environment = "production"
   }
