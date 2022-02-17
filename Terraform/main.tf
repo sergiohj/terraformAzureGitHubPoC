@@ -22,16 +22,3 @@ resource "azurerm_sql_server" "sqlserver" {
   administrator_login               = "admin"
   administrator_login_password      = "Corp123!"
 }
-resource "azurerm_sql_database" "appdb" {
-  name                              = "test"
-  resource_group_name               = "tamops"
-  location                          = "West Europe"
-  server_name                       = "terraformtestshj"
-  edition                           = "Basic"
-  collation                         = "SQL_Latin1_General_CP1_CI_AS"
-  create_mode                       = "Default"
-  requested_service_objective_name  = "Basic"
-  tags = {
-    environment = "dev"
-  }
-}
