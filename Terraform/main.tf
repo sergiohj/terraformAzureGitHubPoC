@@ -35,10 +35,3 @@ resource "azurerm_sql_database" "appdb" {
     environment = "dev"
   }
 }
-resource "azurerm_sql_firewall_rule" "fw_connections_todb" {
-  name                = "allow-azure-services"
-  resource_group_name = "tamops"
-  server_name         = "terraformtestshj"
-  start_ip_address    = "0.0.0.0"
-  end_ip_address      = "0.0.0.0"
-}
