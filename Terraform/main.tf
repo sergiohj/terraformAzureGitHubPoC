@@ -5,12 +5,6 @@ terraform {
     container_name       = "tfstatedevops"
     key                  = "tfstatedevops.tfstate"
   }
-  required_providers {
-    azurerm = {
-      source = "hashicorp/azurerm"
-      version = "~>2.0"
-    }
-  }
 }
 provider "azurerm" {
   features {}
