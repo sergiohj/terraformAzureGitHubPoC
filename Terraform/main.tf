@@ -12,7 +12,7 @@ provider "azurerm" {
 data "azurerm_client_config" "current" {}
 resource "azurerm_resource_group" "tamops" {
   name     = "tamops"
-  location = "West Europe"
+  location = var.region
 }
 resource "azurerm_mssql_server" "sqlserver" {
   name                         = "mssqlservershj"
