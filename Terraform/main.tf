@@ -1,17 +1,17 @@
 terraform {
   backend "azurerm" {
-    resource_group_name  = var.terraformrgname
-    storage_account_name = var.terraformstorageaccountname
-    container_name       = var.terraformcontainername
-    key                  = var.keytfstate
+    resource_group_name  = "TerraformTest"
+    storage_account_name = "terraformstatepocshj"
+    container_name       = "tfstatedevops"
+    key                  = "tfstatedevops.tfstate"
   }
 }
 provider "azurerm" {
   features {}
 }
 data "azurerm_client_config" "current" {}
-resource "azurerm_resource_group" "mainrg" {
-  name     = var.rgname
+resource "azurerm_resource_group" "tamops" {
+  name     = "tamops"
   location = var.region
 }
 resource "azurerm_mssql_server" "sqlserver" {
