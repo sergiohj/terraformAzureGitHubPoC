@@ -58,3 +58,17 @@ resource "azurerm_key_vault" "keyvaulttest" {
     ]
   }
 }
+resource "azurerm_application_insights" "terraformpocAppInsight" {
+  name                = "tf-test-appinsights"
+  location            = azurerm_resource_group.mainrg.location
+  resource_group_name = azurerm_resource_group.mainrg.name
+  application_type    = "web"
+}
+
+output "instrumentation_key" {
+  value = azurerm_application_insights.terraformpocAppInsight.instrumentation_key
+}
+
+output "app_id" {
+  value = azurerm_application_insights.terraformpocAppInsight.app_id
+}
