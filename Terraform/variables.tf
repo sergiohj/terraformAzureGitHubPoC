@@ -4,22 +4,22 @@ variable "terraformrgname" {
   default     = "TerraformTest"
 }
 variable "terraformstorageaccountname" {
-  description = ""
+  description = "Storage account name"
   type        = string
   default     = "terraformstatepocshj"
 }
 variable "terraformcontainername" {
-  description = ""
+  description = "Storage container name"
   type        = string
   default     = "tfstatedevops"
 }
 variable "keytfstate" {
-  description = ""
+  description = "Key tftState"
   type        = string
   default     = "tfstatedevops.tfstate"
 }
 variable "rgname" {
-  description = ""
+  description = "Resource Group Name"
   type        = string
   default     = "tamops"
 }
