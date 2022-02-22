@@ -4,24 +4,24 @@ variable "terraformrgname" {
   default     = "TerraformTest"
 }
 variable "terraformstorageaccountname" {
-  description   = ""
-  type          = string
-  default       = "terraformstatepocshj"
+  description = ""
+  type        = string
+  default     = "terraformstatepocshj"
 }
 variable "terraformcontainername" {
-  description   = ""
-  type          = string
-  default       = "tfstatedevops"
+  description = ""
+  type        = string
+  default     = "tfstatedevops"
 }
 variable "keytfstate" {
-  description   = ""
-  type          = string
-  default       = "tfstatedevops.tfstate"
+  description = ""
+  type        = string
+  default     = "tfstatedevops.tfstate"
 }
 variable "rgname" {
-  description   = ""
-  type          = string
-  default       = "tamops"
+  description = ""
+  type        = string
+  default     = "tamops"
 }
 variable "region" {
   description = "Azure region to be used to deploy"
