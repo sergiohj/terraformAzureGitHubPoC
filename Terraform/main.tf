@@ -11,13 +11,13 @@ provider "azurerm" {
 }
 data "azurerm_client_config" "current" {}
 resource "azurerm_resource_group" "mainrg" {
-  name     = "tamops"
+  name     = "TerraformTestPoC"
   location = var.region
 }
 resource "azurerm_mssql_server" "sqlserver" {
   name                         = "mssqlservershj"
-  resource_group_name          = "tamops"
-  location                     = "West Europe"
+  resource_group_name          = azurerm_resource_group.mainrg.name
+  location                     = var.region
   version                      = "12.0"
   administrator_login          = "4dm1n157r470r"
   administrator_login_password = "4-v3ry-53cr37-p455w0rd"
