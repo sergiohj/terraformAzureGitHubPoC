@@ -72,12 +72,10 @@ output "instrumentation_key" {
 output "app_id" {
   value = azurerm_application_insights.terraformpocAppInsight.app_id
 }
-resource "azurerm_log_analytics_cluster" "cluster" {
-  name                = "example-cluster-log-analytics"
-  resource_group_name = azurerm_resource_group.mainrg.name
+resource "azurerm_log_analytics_workspace" "loganalyticsexample" {
+  name                = "acctest-01"
   location            = azurerm_resource_group.mainrg.location
-
-  identity {
-    type = "SystemAssigned"
-  }
+  resource_group_name = azurerm_resource_group.mainrg.name
+  sku                 = "PerGB2018"
+  retention_in_days   = 30
 }
