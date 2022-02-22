@@ -72,3 +72,12 @@ output "instrumentation_key" {
 output "app_id" {
   value = azurerm_application_insights.terraformpocAppInsight.app_id
 }
+resource "azurerm_log_analytics_cluster" "cluster" {
+  name                = "example-cluster-log-analytics"
+  resource_group_name = azurerm_resource_group.mainrg.name
+  location            = azurerm_resource_group.mainrg.location
+
+  identity {
+    type = "SystemAssigned"
+  }
+}
