@@ -7,4 +7,4 @@ variable "resourgroupname" {
   description = "Resource group name to be used to deploy resources"
   type        = string
   default     = "TerraformTestPoC"
-} 
+}
