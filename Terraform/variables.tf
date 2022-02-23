@@ -3,3 +3,8 @@ variable "region" {
   type        = string
   default     = "West Europe"
 } 
+variable "resourgroupname" {
+  description = "Resource group name to be used to deploy resources"
+  type        = string
+  default     = "TerraformTestPoC"
+} 
