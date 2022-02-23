@@ -36,7 +36,7 @@ variable "sqlserverdatabasename" {
 variable "sqlserverdatabaseskuname" {
   description = "SQL server sku name"
   type        = string
-  default     = "BC_Gen5_2"
+  default     = "Free"
 }
 variable "keyvaultname" {
   description = "KeyVault name"
