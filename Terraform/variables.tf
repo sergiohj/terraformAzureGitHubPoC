@@ -28,3 +28,33 @@ variable "sqlserverversion" {
   type        = string
   default     = "12.0"
 }
+variable "sqlserverdatabasename" {
+  description = "SQL server database name"
+  type        = string
+  default     = "acctest-db-d"
+}
+variable "sqlserverdatabaseskuname" {
+  description = "SQL server sku name"
+  type        = string
+  default     = "BC_Gen5_2"
+}
+variable "keyvaultname" {
+  description = "KeyVault name"
+  type        = string
+  default     = "mykeyvaultshjpoc"
+}
+variable "keyvaultskuname" {
+  description = "KeyVault sku name"
+  type        = string
+  default     = "standard"
+}
+variable "appinsightname" {
+  description = "Application insight name"
+  type        = string
+  default     = "tf-test-appinsights"
+}
+variable "loganalyticsname" {
+  description = "Log Analytics name"
+  type        = string
+  default     = "acctest-01"
+}
